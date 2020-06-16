@@ -21,9 +21,9 @@ public class SignUpController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
-    public SignUpController() {
+    public SignUpController()
+    {
         super();
-       
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -37,6 +37,17 @@ public class SignUpController extends HttpServlet {
 	
 		doGet(request,response);
 		
+		Connection connect =null;
+		
+		connect =ConnectionManager.getConnection();
+		if(connect!=null)
+		{
+			System.out.println("Connection Established");
+		}
+		else
+		{
+			System.out.println("Check your connection");
+		}
 	}
 
 }
