@@ -26,14 +26,17 @@ public class ConnectionManager
 
               		con = DriverManager.getConnection(url, username, password);
               		}
-                catch (IOException e) {
+                catch (IOException e) 
+                {
         			e.printStackTrace();
-        		} catch (SQLException e) {
-        	
-        			e.printStackTrace();
-        		} catch (ClassNotFoundException e) {
-        		
-        			e.printStackTrace();
+        		}
+                catch (SQLException e) 
+                {
+        	            e.printStackTrace();
+        		} 
+                catch (ClassNotFoundException e)
+                {
+        		    e.printStackTrace();
         		}
 		return con;
 	}
